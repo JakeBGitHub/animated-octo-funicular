@@ -10,3 +10,4 @@ UID = os.getenv("UID")
 PASSWORD = os.getenv("PASSWORD")
 
 A_QUERY = os.getenv("A_QUERY")
+B_QUERY = os.getenv("B_QUERY")
