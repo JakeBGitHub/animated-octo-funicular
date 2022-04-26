@@ -9,5 +9,5 @@ DATABASE = os.getenv("DATABASE")
 UID = os.getenv("UID")
 PASSWORD = os.getenv("PASSWORD")
 
-A_QUERY = os.getenv("A_QUERY")
-B_QUERY = os.getenv("B_QUERY")
+SCHEDULED_QUERY = os.getenv("SCHEDULED_QUERY")
+MANUAL_QUERY = os.getenv("MANUAL_QUERY")

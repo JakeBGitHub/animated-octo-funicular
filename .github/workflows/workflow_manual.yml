@@ -1,4 +1,4 @@
-name: run-workflow-B
+name: run-workflow-manual
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  run-workflow-B:
+  run-workflow-manual:
     runs-on: ubuntu-latest
 
     steps:
@@ -40,15 +40,15 @@ jobs:
         echo DATABASE = '${{ secrets.DATABASE }}' >> .env
         echo UID = '${{ secrets.UID }}' >> .env
         echo PASSWORD = '${{ secrets.PASSWORD }}' >> .env
-        echo B_QUERY = '${{ secrets.B_QUERY }}' >> .env
+        echo MANUAL_QUERY = '${{ secrets.MANUAL_QUERY }}' >> .env
 
-    - name: Run workflow B
+    - name: Run workflow manual
       run: |        
-        python main_B.py
+        python main_manual.py
 
     - uses: stefanzweifel/git-auto-commit-action@v4.1.6
       with:
-        commit_message: Run workflow B
+        commit_message: Run workflow manual
         branch: ${{ github.head_ref }}
         commit_user_name: JakeBGitHub
         commit_user_email: jake.barrett@ntlworld.com

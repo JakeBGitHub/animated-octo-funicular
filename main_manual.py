@@ -12,8 +12,8 @@ def main():
     conn = connect_to_database()
 
     ## Query 1
-    conn.execute(B_QUERY)
-    print("Success! B_QUERY complete.")
+    conn.execute(MANUAL_QUERY)
+    print("Success! MANUAL_QUERY complete.")
 
     print("--- Script Execution Time: %s seconds ---" % (time.time() - start_time))
     print("--- End Time: {} ---".format(datetime.datetime.now().strftime("%H:%M:%S")))
